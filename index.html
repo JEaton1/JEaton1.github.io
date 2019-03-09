@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>waffles...</title>
+		<style type="text/css">
+			html{
+				background: gold;
+			}
+			h1{
+				font-size: 80;
+				color: black;
+				background-color: yellow;
+				position: relative;
+			}
+			button{
+				border: none;
+				background-color: gold;
+				font-size: 40px;
+				position: relative;
+
+			}
+			.comic{
+				font-family: Comic Sans MS;
+			}
+			.center{
+				text-align: center;
+			}
+			.right{
+				text-align: right;
+			}
+			.left{
+				text-align: left;
+			}
+
+		</style>
+		<script type="text/javascript">
+
+				var waffleNumber = 0;
+				function buy(){
+					waffleNumber = waffleNumber + 1;
+					document.getElementById("waffle1").innerHTML = "you bought a waffle";
+				};
+
+				function eat(){
+					if (waffleNumber < 1) {
+						document.getElementById('waffle1').innerHTML = "you dont have any waffles to eat";
+					}else{
+						document.getElementById('waffle1').innerHTML = "you ate a waffle";
+						waffleNumber = waffleNumber - 1;
+					};
+				};	
+	
+		</script>
+	</head>
+	<body>
+		<h1 class="center comic">WAFFLES!</h1>
+		<p id="waffle1" class="center comic">you dont have any waffles to eat</p>
+		<div class="left">
+			<button class="buy" onclick="buy()">buy a waffle</button>
+		</div>
+		<div class="right">
+			<button class="eat" onclick="eat()">eat a waffle</button>
+		</div>			
+	</body>
+</html>
